@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="WeatherApp.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="WeatherApp.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-cloud-sun"></i> WeatherApp</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for a city..." oninput="autoSuggest()">
+            <button onclick="searchWeather()"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div id="suggestions" class="suggestions"></div>
+        <button onclick="getLocation()"><i class="fas fa-map-marker-alt"></i> Use my location</button>
+        <button onclick="toggleUnits()"><i class="fas fa-thermometer-half"></i> °C/°F</button>
+    </header>
+    
+    <main>
+        <div id="currentWeather" class="weather-section"></div>
+        <div id="forecast" class="weather-section"></div>
+    </main>
+    <script src="WeatherApp.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #1e1e2e;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#searchContainer {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #1c1c3d;
+    color: #ffffff;
+}
+
+#searchBtn {
+    background-color: #004080;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #0066cc;
+}
+
+#watchlistPageBtn {
+    background-color: #004080;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#watchlistPageBtn:hover {
+    background-color: #0066cc;
+}
+
+
+h1 {
+    color: #ff6b6b;
+    font-size: 2.5em;
+}
+
+button {
+    background-color: #004080;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0066cc;
+}
+
+#searchInput {
+    width: 350px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #1c1c3d;
+    color: #ffffff;
+}
+
+#searchBtn {
+    margin-top: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.movie-card {
+    background-color: #1e1e2e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.modal-content {
+    background-color: #1c1c3d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    color: #ffffff;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+.modal-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff6b6b;
+    z-index: 1010; 
+    transition: color 0.3s ease;
+}
+
+
+.close:hover {
+    color: #ff4c4c;
+}
+
+#backToSearchBtn {
+    background-color: #004080;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#backToSearchBtn:hover {
+    background-color: #0066cc;
+}
+
+.remove-btn {
+    background-color: #ff4500;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff6347;
+}
+
+#suggestions {
+    background-color: #1c1c3d;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 350px;
+    margin-top: 10px;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #333333;
+}
+
+.modal.show {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #searchContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+
+    #watchlistPageBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .modal-content {
+        padding: 15px;
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #searchInput, #searchBtn, #watchlistPageBtn {
+        width: 100%;
+    }
+    .movie-card h3 {
+        font-size: 1em;
+    }
+
+    .movie-card p {
+        font-size: 0.9em;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2em;
+    }
+
+    .modal-content p {
+        font-size: 1em;
+    }
+}

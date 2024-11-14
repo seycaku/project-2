@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="movieApp.css">
+</head>
+<body>
+    <header>
+        <h1>My WatchList</h1>
+        <button id="backToSearchBtn">Back to Home</button>
+    </header>
+
+    <section id="watchlistGrid" class="grid-container"></section>
+
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h2 id="movieTitle"></h2>
+                <p id="movieSynopsis"></p>
+                <p>Rating: <span id="movieRating"></span></p>
+                <p>Runtime: <span id="movieRuntime"></span></p>
+            </div>
+        </div>
+
+        <script src="movieApp.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="movieApp.css">
+</head>
+<body>
+    <!-- Search Section -->
+    <header>
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for movies...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <button id="watchlistPageBtn">Watchlist</button>
+    </header>
+    
+
+    <!-- Movies Grid -->
+    <section id="moviesGrid" class="grid-container"></section>
+
+    <!-- Modal for Movie Details -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="movieTitle"></h2>
+            <p id="movieSynopsis"></p>
+            <p><strong>Rating:</strong> <span id="movieRating"></span></p>
+            <p><strong>Runtime:</strong> <span id="movieRuntime"></span></p>
+            <div id="movieCast"></div>
+            <button id="watchlistBtn">Add to Watchlist</button>
+        </div>
+    </div>
+
+    <script src="movieApp.js"></script>
+</body>
+</html>

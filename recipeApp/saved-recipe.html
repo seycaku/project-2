@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Recipes</title>
+    <link rel="stylesheet" href="RecipeApp.css">
+</head>
+<body>
+    <header class="header">
+    <a href="RecipeApp.html" class="logo">RecipeApp</a>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="RecipeApp.html" class="navbar-link">Home</a></li>
+            <li><a href="saved-recipe.html" class="navbar-link">Favorites</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="favorites-section">
+    <h1>Your Favorite Recipes</h1>
+    <div class="recipe-grid" id="resultsContainer"></div>
+</section>
+
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="recipeDetails"></div>
+    </div>
+</div>
+
+    <script src="RecipeApp.js"></script>
+</body>
+</html>
